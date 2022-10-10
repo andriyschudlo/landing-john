@@ -1,0 +1,158 @@
+
+.header {
+ &_content {
+  max-width: 1052px;
+  padding: 0 10px;
+  margin: 0 auto;
+ }
+ &_menu {
+   padding: 10px 0;
+   height: 82px;
+   align-items: center;
+   display: flex;
+   justify-content: flex-end;
+   @media (max-width: $md3){
+    height: 50px;
+   }
+   }
+}
+.menu {
+ &_icon {
+ }
+ &_body {
+  @media (max-width: $md3) {
+   transform: translate((0, -100%));
+   transition: transform .4s ease 0s;
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   overflow: auto;
+   padding: 70px 10px 30px 10px;
+   background-color: rgba(255,255,255,.8);
+  }
+ }
+ &_list {
+  li{
+   margin: 0 0 30px 0;
+   &:last-child {
+    margin: 0;
+   }
+  }
+  @media (min-width: $md3){
+   display: flex;
+   li {
+    margin: 0 33px 0 0;
+   }
+  } 
+ }
+ &_link {
+   font-size: 20px;
+   font-weight: 500;
+   color: #000;
+   transition: all .4s ease 0s;
+   &._active{
+    color: darkred;
+   }
+   @media (min-width: $md2){
+    &:hover {
+     color: $red;
+    }
+   }
+   @media (max-width: $md3){
+    font-size: 40px;
+    text-align: center;
+    display: block;
+   }
+ }
+}
+
+.icon-menu {
+ display: none;
+ @media(max-width: $md3) {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 18px;
+  cursor: pointer;
+  z-index: 5;
+  span {
+   transition: all .3s ease 0s;
+   top: calc(50% - 1px);
+   left: 0;
+   position: absolute;
+   width: 100%;
+   height: 2px;
+   background-color: #000;
+   &:first-child {
+    top: 0;
+   }
+   &:last-child {
+    top: auto;
+    bottom: 0px;
+   }
+  }
+  &._active {
+   span {
+    transform:  scale(0);
+    &:first-child {
+     transform: rotate(-45deg);
+     top: calc(50% - 1px);
+    }
+    &:last-child {
+     transform: rotate(45deg);
+     bottom: calc(50% - 1px);
+    }
+   }
+  }
+ }
+}
+
+
+//_________burger
+
+// .icon-menu {
+//  display: none;
+//  @media(max-width: $md3) {
+//   display: block;
+//   position: absolute;
+//   top: 18px;
+//   right: 10px;
+//   width: 30px;
+//   height: 18px;
+//   cursor: pointer;
+//   z-index: 5;
+//   span {
+//    transition: all .3s ease 0s;
+//    top: calc(50% - 1px);
+//    left: 0;
+//    position: absolute;
+//    width: 100%;
+//    height: 2px;
+//    background-color: #000;
+//    &:first-child {
+//     top: 0;
+//    }
+//    &:last-child {
+//     top: auto;
+//     bottom: 0px;
+//    }
+//   }
+//   &._active {
+//    span {
+//     transform:  scale(0);
+//     &:first-child {
+//      transform: rotate(-45deg);
+//      top: calc(50% - 1px);
+//     }
+//     &:last-child {
+//      transform: rotate(45deg);
+//      bottom: calc(50% - 1px);
+//     }
+//    }
+//   }
+//  }
+// }
+
+//---------end burger

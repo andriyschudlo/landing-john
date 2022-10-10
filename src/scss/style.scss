@@ -1,0 +1,99 @@
+// ====================================== FONTS
+// &display=swap&subset=cyrillic-ext
+@import url(https://fonts.googleapis.com/css?family=Heebo:400,500,700,900&display=swap);
+@font-face {
+  font-family: "NevaC Serif Bold";
+  src: url(../fonts/NevaC-Bold.woff2);
+}
+
+// ======================= DIMENSIONS
+$ff: 'Heebo';
+$miw: 320px;
+$mxw: 1052px;
+$mxwContainer: 856px;
+
+//========================= brakepoints
+$md1: $mxwContainer + 12px;
+$md2: 991.98px;
+$md3: 767.98px;
+$md4: 479.98px;
+//-------------------------- COLORS
+$red: rgb(194, 82, 82);
+
+//======================== BLOCKS
+.wrapper{
+ width: 100%;
+ height: auto;
+ min-height: 100vh;
+ overflow: hidden;
+ display: flex;
+ flex-direction: column;
+}
+
+.container{
+ max-width: $mxwContainer;
+ margin: 0 auto;
+ @media (max-width: $md1){
+  max-width: 970px;
+ }
+ @media (max-width: $md2){
+  max-width: 750px;
+ }
+ @media (max-width: $md3){
+  max-width: none;
+  padding: 0 10px;
+ }
+}
+
+._ibg{//set min-width
+ position: relative;
+ img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+ }
+}
+
+@import 'normalize';
+@import 'icons';
+@import 'header';
+@import 'home';
+@import 'ui';
+@import 'works';
+@import 'footer';
+@import 'blog';
+@import 'article';
+// MAIN BLOCK ====================== MAIN BLOCK ==============
+.page {
+ padding-top: 90px;
+ flex: 1 1 auto;
+ @media (max-width: $md3)
+ {
+  padding-top: 30px;
+ }
+}
+//-------------
+.social {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ svg{
+  height: 30px;
+  width: 30px;
+ }
+ &_item {
+   margin: 0 40px;
+   font-size: 30px;
+   color: inherit;
+   transition: opacity .4s ease 0s;
+   &:hover{
+    opacity: .7;
+   }
+   @media (max-width: $md3) {
+    margin: 0 20px;
+   }
+ }
+}

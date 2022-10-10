@@ -1,0 +1,175 @@
+.hello {
+ padding: 38px 0 71px 0;
+
+ @media (max-width: $md1) {
+  padding: 0 0 71px 0;
+ }
+
+ @media (max-width: $md3) {
+  padding-bottom: 60px;
+ }
+
+ &_container {
+  display: flex;
+
+  @media (max-width: $md3) {
+   text-align: center;
+   flex-direction: column-reverse;
+  }
+ }
+
+ &_content {
+  padding-right: 20px;
+  flex: 1 1 auto;
+
+  *:last-child {
+   margin-bottom: 0; //________убирает отступ от любого последнего компонента в блоке
+  }
+
+  @media (max-width: $md1) {
+   padding: 18px 50px 0 0;
+  }
+
+  @media (max-width: $md3) {
+   padding: 40px 0 0 0;
+  }
+ }
+
+ img {
+  // flex: 0 0 243px;
+  height: 243px;
+  // max-width: 100%;
+  border-radius: 50%;
+  box-shadow: -5px 13px 0 0 #dff;
+
+  @media (max-width: $md3) {
+   height: 170px;
+  }
+ }
+}
+
+.title {
+ margin-bottom: 25px;
+ font-size: 44px;
+ line-height: calc(60 / 44 * 100%);
+ font-weight: 700;
+}
+
+.text {
+ margin-bottom: 20px;
+ font-size: 16px;
+ line-height: calc(23 / 16 * 100%);
+}
+
+.btn {
+ background: $red;
+ border-radius: 2px;
+ font-weight: 500;
+ font-size: 20px;
+ line-height: calc(29 / 20 * 100%);
+ color: #fff;
+ height: 47px;
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ padding: 0px 20px;
+ transition: background .4s ease 0s;
+
+ @media (min-width: 992px) {
+  &:hover {
+   background: darken($red, 15%);
+  }
+ }
+}
+
+                              //=============== Posts section ==================
+.recent-posts {
+ background: rgb(225, 240, 255);
+ padding: 25px 0px 13px 0px;
+ @media (max-width: $md3) {
+  padding: 25px 0px 23px 0px;
+ }
+ &_header {
+  display: flex;
+ }
+ &_title {
+  padding-right: 20px;
+  margin-bottom: 20px; //------- in case viewAll is under
+  flex: 1 0 auto;
+  // font-size: 22px;
+ }
+ &_view-all {
+  // white-space: nowrap;  ----- flex is insted ˇ
+  flex: 0 0 auto;
+  font-size: 16px;
+  line-height: 23px;
+  color: rgb(84, 191, 245);
+ }
+ &_items { 
+  @media (min-width: $md3) {
+   display: flex;
+   justify-content: space-between;
+  }
+ }
+ &_column {
+  flex: 0 0 48%;
+  margin-bottom: 17px;
+ }
+ &_item {
+ }
+}
+.recent-post {
+ height: 100%;
+ padding: 20px 20px 0;
+  background: white;
+  border-radius: 4px;
+  @media (max-width: $md3)
+{
+ padding: 15px;
+} 
+&_title {
+  display: inline-block;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: calc(38/26*100%);
+  transition: color .4s ease 0s;
+  margin-bottom: 17px;
+  @media (min-width: $md2) {
+   &:hover {
+    color: darkred;
+   }
+  }
+ }
+ &_info {
+  font-size: 18px;
+  line-height: calc(26/18*100%);
+  margin-bottom: 15px;
+  span {
+   margin: 0 10px;
+  }
+  @media (max-width: $md3) {
+   font-size: 16px;
+  }
+ }
+ &_text {}
+}
+//======================== WORKS
+.featured {
+  &-works{
+   padding: 30px 0 30px;
+   &_items {
+    @media (max-width: $md3) {
+     display: flex;  //---- creating slider for content
+     overflow: auto;//
+    }
+   }
+}
+  
+  &-works_container{
+
+}
+  &-works_title{
+   padding-bottom: 22px;
+}
+}

@@ -1,0 +1,22 @@
+@font-face {
+ font-family: "icons";
+ // font-display: swap;
+ src: url("fonts/icons.ttf") format("truetype");
+ // font-weight: normal;
+ // font-style: normal;
+ // font-display: block;
+}
+
+// icomoon.io svg to fonts
+._icon-fb::before {
+ content: "\e900";
+}
+._icon-insta::before {
+ content: "\e901";
+}
+._icon-Linkedin::before {
+ content: "\e902";
+}
+._icon-twit::before {
+ content: "\e903";
+}
